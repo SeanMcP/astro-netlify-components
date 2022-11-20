@@ -28,7 +28,12 @@ TODO(@seanmcp)
 
 ### `Form`
 
-A helpful type-safe wrapper to create forms with [Netlify Forms](https://docs.netlify.com/forms/setup/).
+A helpful type-safe wrapper to create forms with [Netlify Forms](https://docs.netlify.com/forms/setup/). The component:
+
+- Requires a `name` prop to identify the form
+- Adds the `data-netlify=true` attribute to the `form` element
+- Adds a honeypot field
+- Warns if your `action` property does not begin with `/`
 
 ```astro
 ---
