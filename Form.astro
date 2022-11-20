@@ -11,7 +11,7 @@ const { name, ...rest } = Astro.props;
 
 if (rest.action && rest.action[0] !== "/") {
   throw new Error(
-    "The `action` path must be relative to the site root, starting with a `/`, see https://docs.netlify.com/forms/setup/#success-messages"
+    "The `action` path must be relative to the site root and start with a `/`. See https://docs.netlify.com/forms/setup/#success-messages"
   );
 }
 
