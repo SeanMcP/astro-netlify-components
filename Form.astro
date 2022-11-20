@@ -14,8 +14,20 @@ if (rest.action && rest.action[0] !== "/") {
     "The `action` path must be relative to the site root, starting with a `/`, see https://docs.netlify.com/forms/setup/#success-messages"
   );
 }
+
+const honeypotName = `hp-${Date.now()}`;
 ---
 
-<form data-netlify="true" name={name} {...rest}>
+<form data-netlify="true" name={name} netlify-honeypot={honeypotName} {...rest}>
+  <label>
+    Don't fill this out if you're human:
+    <input tabindex="-1" name={honeypotName} />
+  </label>
   <slot />
 </form>
+
+<style>
+  label {
+    display: none;
+  }
+</style>
