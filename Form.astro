@@ -2,12 +2,20 @@
 import type { HTMLAttributes } from "astro/types";
 
 export interface Props extends HTMLAttributes<"form"> {
-  /** WARNING: If you set to false, then your Netlify form will not function. */
-  "data-netlify"?: boolean;
   name: string;
 }
 
 const { name, ...rest } = Astro.props;
+const handledAttributes = ["data-netlify", "netlify", "netlify-honeypot"];
+
+handledAttributes.forEach((attr) => {
+  if (rest.hasOwnProperty(attr)) {
+    console.warn(
+      `The \`${attr}\` attribute is handled internally; ignoring value \`${rest[attr]}\``
+    );
+    delete rest[attr];
+  }
+});
 
 if (rest.action && rest.action[0] !== "/") {
   throw new Error(
