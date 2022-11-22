@@ -14,7 +14,7 @@ Then import the components into your Astro project:
 
 ```astro
 ---
-import { Form } from "astro-netlify-components";
+import Form from "astro-netlify-components/Form.astro";
 ---
 
 <Form name="example">{/* ... */}</Form>
@@ -61,8 +61,6 @@ import Form from "astro-netlify-components";
 
 ```ts
 export interface Props extends HTMLAttributes<"form"> {
-  /** WARNING: If you set to false, then your Netlify form will not function. */
-  "data-netlify"?: boolean;
   name: string;
 }
 ```
