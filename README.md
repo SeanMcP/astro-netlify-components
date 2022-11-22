@@ -14,17 +14,53 @@ Then import the components into your Astro project:
 
 ```astro
 ---
+import CMS from "astro-netlify-components/CMS.astro";
 import Form from "astro-netlify-components/Form.astro";
 ---
-
-<Form name="example">{/* ... */}</Form>
 ```
 
 ## Components
 
 ### `CMS`
 
-TODO(@seanmcp)
+A full-page component to render the [Netlify CMS](https://www.netlifycms.org/) admin interface. The component:
+
+- Adds the Netlify Identity script to the document `head`
+- Adds the Netlify CMS script to the document `body`
+- Implements a redirect script based on Netlify Identity and `Astro.url.pathname`
+- Exposes "head"/"food" slots for customization
+
+```astro
+---
+// src/pages/admin.astro
+import CMS from "astro-netlify-components/CMS.astro";
+---
+
+<CMS />
+```
+
+**Note**: Make sure to [configure your CMS with a `config.yml` file](https://www.netlifycms.org/docs/configuration-options/) in the correct public directory!
+
+### Slots
+
+The `CMS` component supports the following slots:
+
+- "head": Content rendered in the `<head>` element
+- "foot": Content rendered in the `<body>` element, _after_ the CMS script
+
+```astro
+<CMS>
+  <Fragment slot="head">
+    <link rel="icon" href="/favicon.ico" />
+    <style>
+      /** ... */
+    </style>
+  </Fragment>
+  <script slot="foot">
+    // Create custom widget
+  </script>
+</CMS>
+```
 
 ### `Form`
 
@@ -37,7 +73,7 @@ A helpful type-safe wrapper to create forms with [Netlify Forms](https://docs.ne
 
 ```astro
 ---
-import Form from "astro-netlify-components";
+import Form from "astro-netlify-components/Form.astro";
 ---
 
 <Form name="contact">
@@ -68,3 +104,7 @@ export interface Props extends HTMLAttributes<"form"> {
 `name` is the only required prop, and is used by Netlify to identify the form.
 
 If you pass an `action` prop that does not start with a `/`, then the component will throw an error. [Read Netlify's docs about success redirects](https://docs.netlify.com/forms/setup/#success-messages).
+
+## License
+
+[MIT](/LICENSE)
