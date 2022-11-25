@@ -1,6 +1,8 @@
 # astro-netlify-components
 
-Astro components for Netlify
+[![npm](https://img.shields.io/npm/v/astro-netlify-components.svg)](https://npmjs.com/package/astro-netlify-components) [![npm](https://img.shields.io/npm/dt/astro-netlify-components.svg)](https://npmjs.com/package/astro-netlify-components)
+
+🌌 Astro components for Netlify
 
 ## Usage
 
