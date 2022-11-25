@@ -1,6 +1,6 @@
 {
   "name": "astro-netlify-components",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Astro components for Netlify",
   "files": [
     "CMS.astro",
@@ -19,6 +19,6 @@
   "homepage": "https://github.com/seanmcp/astro-netlify-components#readme",
   "license": "MIT",
   "peerDependencies": {
-    "astro": "^1.6.10"
+    "astro": "^1.6.0"
   }
 }
