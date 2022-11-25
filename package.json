@@ -19,6 +19,6 @@
   "homepage": "https://github.com/seanmcp/astro-netlify-components#readme",
   "license": "MIT",
   "peerDependencies": {
-    "astro": "^1.6.10"
+    "astro": "^1.6.0"
   }
 }
