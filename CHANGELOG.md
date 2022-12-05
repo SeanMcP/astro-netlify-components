@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- Fix Netlify Identity script by inlining
+## [0.1.1] - 2022-12-05
+
+- Fix Netlify Identity script by inlining (#2)
 
 ## [0.1.0] - 2022-11-25
 
