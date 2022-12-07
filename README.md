@@ -18,6 +18,7 @@ Then import the components into your Astro project:
 ---
 import CMS from "astro-netlify-components/CMS.astro";
 import Form from "astro-netlify-components/Form.astro";
+import Identity from "astro-netlify-components/Identity.astro";
 ---
 ```
 
@@ -107,6 +108,27 @@ export interface Props extends HTMLAttributes<"form"> {
 `name` is the only required prop, and is used by Netlify to identify the form.
 
 If you pass an `action` prop that does not start with a `/`, then the component will throw an error. [Read Netlify's docs about success redirects](https://docs.netlify.com/forms/setup/#success-messages).
+
+### `Identity`
+
+A script tag to add to your `document.head` to enable [Netlify Identity](https://docs.netlify.com/visitor-access/identity/). This is used internally by `CMS` ([read more](https://www.netlifycms.org/docs/add-to-your-site/#add-the-netlify-identity-widget)).
+
+```astro
+---
+import Identity from "astro-netlify-components/Identity.astro";
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <Identity />
+  </head>
+  <body>
+    <!-- ... -->
+  </body>
+</html>
+
+```
 
 ## License
 

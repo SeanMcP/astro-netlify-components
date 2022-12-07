@@ -4,7 +4,8 @@
   "description": "Astro components for Netlify",
   "files": [
     "CMS.astro",
-    "Form.astro"
+    "Form.astro",
+    "Identity.astro"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

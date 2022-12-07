@@ -1,14 +1,15 @@
+---
+import Identity from "./Identity.astro";
+---
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-source="astro-netlify-components">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Page</title>
-    <script
-      is:inline
-      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-    ></script>
+    <Identity />
     <style>
       /* See https://github.com/netlify/netlify-cms/issues/5092 */
       [data-slate-editor] {

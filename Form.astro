@@ -26,7 +26,7 @@ if (rest.action && rest.action[0] !== "/") {
 const honeypotName = `hp-${Date.now()}`;
 ---
 
-<form data-netlify="true" name={name} netlify-honeypot={honeypotName} {...rest}>
+<form data-source="astro-netlify-components" data-netlify="true" name={name} netlify-honeypot={honeypotName} {...rest}>
   <label>
     Don't fill this out if you're human:
     <input tabindex="-1" name={honeypotName} />
