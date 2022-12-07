@@ -45,7 +45,7 @@ import CMS from "astro-netlify-components/CMS.astro";
 
 **Note**: Make sure to [configure your CMS with a `config.yml` file](https://www.netlifycms.org/docs/configuration-options/) in the correct public directory!
 
-### Slots
+#### Slots
 
 The `CMS` component supports the following slots:
 

@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Fix "Slots" heading level in README
+
 ## [0.2.0] - 2022-12-07
 
 - Add `Identity` component (#5)
