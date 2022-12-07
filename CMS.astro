@@ -9,6 +9,12 @@
       is:inline
       src="https://identity.netlify.com/v1/netlify-identity-widget.js"
     ></script>
+    <style>
+      /* See https://github.com/netlify/netlify-cms/issues/5092 */
+      [data-slate-editor] {
+        -webkit-user-modify: read-write !important;
+      }
+    </style>
     <slot name="head" />
   </head>
   <body>
