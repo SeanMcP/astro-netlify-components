@@ -7,9 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2022-12-07
+
 - Add `Identity` component (#5)
 - Add `data-source=astro-netlify-components` attribute to top-level element in each component (#5)
-- Add jumping cursor fix for Netlify CMS (#4)
+- Fix jumping cursor in Netlify CMS (#4)
 
 ## [0.1.1] - 2022-12-05
 
