@@ -31,6 +31,7 @@ A full-page component to render the [Netlify CMS](https://www.netlifycms.org/) a
 - Adds the Netlify CMS script to the document `body`
 - Implements a redirect script based on Netlify Identity and `Astro.url.pathname`
 - Exposes "head"/"food" slots for customization
+- Fixes jumping cursor issue in WebKit browsers ([netlify/netlify-cms#5092](https://github.com/netlify/netlify-cms/issues/5092))
 
 ```astro
 ---
