@@ -18,8 +18,5 @@
   "author": "Sean McPherson <sean@seanmcp.com> (https://github.com/seanmcp)",
   "repository": "https://github.com/seanmcp/astro-netlify-components",
   "homepage": "https://github.com/seanmcp/astro-netlify-components#readme",
-  "license": "MIT",
-  "peerDependencies": {
-    "astro": "^1.6.0"
-  }
+  "license": "MIT"
 }
